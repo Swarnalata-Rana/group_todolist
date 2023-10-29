@@ -8,6 +8,7 @@ export default function Home() {
             <div>
               Hello World
               hello pooja
+              hello ruchi
             </div>
          </>
   )
