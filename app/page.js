@@ -2,9 +2,9 @@
 import React, { useState } from "react";
 import "./globals.css";
 
-const App = ()=> {
+const App = () => {
   const [inputList, setInputList] = useState("");
-  const [priority, setPriority] = useState("low");
+  const [priority, setPriority] = useState("1");
   const [time, setTime] = useState("");
   const [items, setItems] = useState([]);
 
@@ -23,24 +23,33 @@ const App = ()=> {
   const handleAddItem = () => {
     if (inputList !== "") {
       const newItem = {
-      	id :new Date().getTime(),
+        id: new Date().getTime(),
         text: inputList,
         priority: priority,
         time: time,
+        done: false,
       };
       setItems((oldItems) => [...oldItems, newItem]);
       setInputList("");
-      setPriority("low");
+      setPriority("1");
       setTime("");
     }
   };
-  
-  const handleDeleteItem =(id) =>{
-  	const updatedItems = items.filter((item) => item.id !== id);
-    setItems(updatedItems);
-  }; 
-  
 
+  const handleToggleDone = (id) => {
+    const updatedItems = items.map((item) =>
+      item.id === id ? { ...item, done: !item.done } : item
+    );
+    setItems(updatedItems);
+  };
+
+  const handleDeleteItem = (id) => {
+    const updatedItems = items.filter((item) => item.id !== id);
+    setItems(updatedItems);
+  };
+
+  const completedItems = items.filter((item) => item.done);
+  const pendingItems = items.filter((item) => !item.done);
 
   return (
     <>
@@ -53,9 +62,9 @@ const App = ()=> {
           onChange={handleInputChange}
         />
         <select value={priority} onChange={handlePriorityChange}>
-          <option value="low">1</option>
-          <option value="medium">2</option>
-          <option value="high">3</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
         </select>
         <input
           className="text"
@@ -64,22 +73,33 @@ const App = ()=> {
           onChange={handleTimeChange}
         />
         <button onClick={handleAddItem}>Add</button>
-        
-       
+
+        <h2>Completed Tasks:</h2>
         <ul>
-          {items.map((item) => {
-            return (
-              <li key={item.id}>
-                {item.text} - Priority: {item.priority}, Time: {item.time}
-                <button onClick={() =>  handleDeleteItem(item.id)}> Delete </button>
-              </li>
-            );
-          })}
+          {completedItems.map((item) => (
+            <li key={item.id}>
+              <s>{item.text}</s> - Priority: {item.priority}, Time: {item.time}
+              <button onClick={() => handleToggleDone(item.id)}>
+                {item.done ? "Not Done" : "Done"}
+              </button>
+              <button onClick={() => handleDeleteItem(item.id)}>Delete</button>
+            </li>
+          ))}
+        </ul>
+
+        <h2>Pending Tasks:</h2>
+        <ul>
+          {pendingItems.map((item) => (
+            <li key={item.id}>
+              {item.text} - Priority: {item.priority}, Time: {item.time}
+              <button onClick={() => handleToggleDone(item.id)}>
+                {item.done ? "Not Done" : "Done"}
+              </button>
+              <button onClick={() => handleDeleteItem(item.id)}>Delete</button>
+            </li>
+          ))}
         </ul>
       </div>
-      <button onClick={handleAddItem}>Delete</button>
-      <button onClick={handleAddItem}>Done</button>
-       
     </>
   );
 };
