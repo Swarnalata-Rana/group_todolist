@@ -1,15 +1,15 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+"use client"
+import React from "react";
+import "./globals.css";
+import Status from "./status"; 
 
-export default function Home() {
-  return (
-    
-         <>
-            <div>
-              Hello World
-              hello pooja
-              hello ruchi
-            </div>
-         </>
-  )
+const Call = () => {
+     return (
+ 	 <div>
+      <Status /> 
+    </div>
+  );
 }
+
+export default Call;
+
