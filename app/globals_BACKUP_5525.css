@@ -1,9 +1,4 @@
-body{
-	background:lightblue;
 
-<<<<<<< HEAD
-}
-=======
 <<<<<<< HEAD
 .main_div{
 	border:2px solid pink;
@@ -23,26 +18,26 @@ body{
 
 }
 =======
->>>>>>> c0c59a26f4b40dd6e8dcfbe374f270f48ecb9563
 
-.main_row{
-    border: 2px solid blue;
-    height:400px;
-    width:500px;
+.main_div{
+    border: 2px solid red;
+    height:200px;
+    width:100px;
     background:lightblue;
-    margin-left:400px;
-    margin-top:100px;
        
 }     
 .text{
 	border: 1px solid red;
-    height:50px;
+    height:30px;
     width:200px;
     margin-left:10px;
     margin-top:5px;
 }
-.h1{
-	margin:center;
+.ol li{
+	font-size:20px;
+	font-weight:500;
+	display: flex;
+	 
 }
 
 >>>>>>> 0378433f00a679ecfaf06ccd6bb30de3030cea37
