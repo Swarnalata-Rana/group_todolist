@@ -1,39 +1,12 @@
-body{
-	background:lightblue;
 
-<<<<<<< HEAD
-}
-=======
-<<<<<<< HEAD
 .main_div{
-	border:2px solid pink;
+	border:2px solid red;
 	height:400px;
 	width:600px;
 	background:blue;
 	margin-left:600px;
 	margin-top:180px;
 };
-
-.test{
-	border:2px solid pink;
-	height:40px;
-	width:60px;
-	
-
-
-}
-=======
->>>>>>> c0c59a26f4b40dd6e8dcfbe374f270f48ecb9563
-
-.main_row{
-    border: 2px solid blue;
-    height:400px;
-    width:500px;
-    background:lightblue;
-    margin-left:400px;
-    margin-top:100px;
-       
-}     
 .text{
 	border: 1px solid red;
     height:50px;
@@ -45,4 +18,4 @@ body{
 	margin:center;
 }
 
->>>>>>> 0378433f00a679ecfaf06ccd6bb30de3030cea37
+

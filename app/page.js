@@ -1,20 +1,5 @@
 "use client"
-<<<<<<< HEAD
-import React from "react";
-import "./globals.css";
-import Status from "./status"; 
-
-const Call = () => {
-     return (
- 	 <div>
-      <Status /> 
-    </div>
-  );
-}
-
-export default Call;
-=======
-import React, { useState } from "react";
+import React, { useState } from "react"
 import "./globals.css";
 
 const App = () => {
@@ -120,5 +105,4 @@ const App = () => {
 };
 
 export default App;
->>>>>>> 0378433f00a679ecfaf06ccd6bb30de3030cea37
 
