@@ -94,7 +94,16 @@ const Form_Component = () => {
             <div className="sort_btn_div">
                 <button className="sort_btn" onClick={sortItemsByPriority}>Sort by Priority</button>
             </div>
-  
+            {/* <table className="table">
+              <tr className="">
+                <td>Task Name</td>
+                <td>Task Time</td>
+                <td>Task Priority</td>
+                <td>Sort</td>
+                <td>Done/Undone</td>
+                <td>Delete</td>
+              </tr>
+            </table> */}
             <ul className="remove_dot">
               {items.map((item, index) => (
                 <li key={index}>
