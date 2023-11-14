@@ -1,6 +1,6 @@
 *{
   text-align: center ;
-  /* background-color: rgb(19, 57, 57); */
+  background-image: linear-gradient(to right, rgb(181, 111, 111),rgb(196, 165, 106),rgb(172, 172, 97),rgb(95, 173, 95),rgb(88, 88, 172),rgb(146, 110, 172),rgb(165, 79, 165));
 }
 .row_1{
   align-items: center;
@@ -20,6 +20,7 @@
   border-radius: 20px;
   background-color: coral;
   box-shadow: 5px 5px;
+  font-size:15px;
 }
 .input_time{
   height: 30px;
@@ -28,6 +29,8 @@
   margin-top: 20px;
   background-color: coral;
   box-shadow: 5px 5px;
+  font-size:15px;
+
 }
 .work_priority{
   margin-top: 20px;
